@@ -42,6 +42,28 @@ YAPSAT, el yapımı ve özgün tasarım ürünlerin satışına odaklanan, moder
 9.  **Gelişmiş Bilgi Al Panelleri:**
     *   Yönetici ve Satıcı panellerinde ürün ekleme sayfalarının işleyişi hakkında kullanıcıya kılavuzluk eden interaktif rehber panelleri.
 
+
+---
+
+## 📸 Ekran Görüntüleri (Screenshots)
+
+Aşağıda YAPSAT platformunun öne çıkan sayfalarına ait ekran görüntüleri yer almaktadır:
+
+### 🔑 Üyelik Süreçleri
+| Üye Kayıt Sayfası | Üye Giriş Sayfası |
+|:---:|:---:|
+| ![Kayıt Ol](photos/signup.png) | ![Giriş Yap](photos/login.png) |
+
+### 🛍️ Alışveriş ve Sepet Süreçleri
+| Ürün İnceleme & Detay (İnteraktif Carousel) | Alışveriş Sepeti |
+|:---:|:---:|
+| ![Ürün İnceleme](photos/urun_incele.png) | ![Sepet](photos/sepet.png) |
+
+### 💼 Yönetim ve Satıcı Dashboards
+| Yönetici Ürün Yönetim Paneli | Satıcı & Mağaza Paneli |
+|:---:|:---:|
+| ![Yönetici Paneli](photos/adminpanel.png) | ![Satıcı Paneli](photos/dash.png) |
+
 ---
 
 ## 🛠️ Kurulum ve Çalıştırma
