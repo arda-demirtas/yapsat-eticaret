@@ -1,112 +1,111 @@
-# YAPSAT - El Emeği Pazaryeri Platformu
+# YAPSAT - Handmade Marketplace Platform
 
-YAPSAT, el yapımı ve özgün tasarım ürünlerin satışına odaklanan, modern, şık ve responsive tasarıma sahip çok satıcılı (multi-vendor) bir e-ticaret platformudur.
-
----
-
-## 🚀 Teknolojik Altyapı (Tech Stack)
-
-### Backend (Arka Ofis)
-*   **Dil ve Framework:** Python 3.12, FastAPI
-*   **Veri Tabanı & ORM:** SQLAlchemy 2.x, SQLite (Alembic Migrations ile)
-*   **Kimlik Doğrulama:** JWT (JSON Web Tokens) ile güvenli session yönetimi
-*   **Görsel Sunucu:** Cloudinary entegrasyonu (Medya dosyaları için)
-
-### Frontend (Kullanıcı Arayüzü)
-*   **Framework & Dil:** React 19, TypeScript
-*   **Derleyici:** Vite
-*   **Tasarım & Stil:** Tailwind CSS (Modern cam morfolojisi - Glassmorphism, yumuşak geçişler ve micro-animations ile)
+YAPSAT is a modern, elegant, and fully responsive multi-vendor e-commerce platform dedicated to selling handmade crafts and unique design goods.
 
 ---
 
-## 💡 Öne Çıkan Özellikler ve Fonksiyonlar
+## 🚀 Tech Stack
 
-1.  **Gelişmiş & Mobil Uyumlu Navbar:**
-    *   Responsive hamburger menü tasarımı.
-    *   Giriş yapan kullanıcının baş harflerinden oluşan şık avatar tasarımı.
-    *   Admin ve Satıcı dashboard'larına dinamik erişim linkleri.
-2.  **Otomatik Admin Atama:**
-    *   Uygulama ayağa kalktığında `arda.demirtas2002@gmail.com` e-posta adresine sahip kullanıcı otomatik olarak en yüksek yetkili "ADMIN" statüsüne terfi ettirilir.
-3.  **Akıllı Kategori Başlangıç Verisi (Seeder):**
-    *   Veri tabanında kategori bulunmaması durumunda sunucu başlangıçta otomatik olarak 10 temel popüler kategoriyi (Elektronik, Ev & Yaşam, Giyim & Aksesuar, Kozmetik, Spor, Anne & Bebek, Kitap/Hobi, Süpermarket, Otomotiv, Pet Shop) otomatik olarak oluşturur.
-4.  **İnteraktif Ürün Görsel Carousel:**
-    *   Ürün detay sayfasında sol/sağ geçiş okları ve durum indikatör noktaları içeren, alt kısımda thumbnail (küçük resim) senkronizasyonuna sahip modern bir galeri kaydırıcısı.
-5.  **Otomatik SEO Etiketleri:**
-    *   Ürün ekleme veya güncelleme esnasında `seo_title` (`[Ürün Adı] - [Kategori] | YAPSAT`) ve `seo_description` (ürün açıklamasının ilk 150 karakteri) alanları sunucu tarafından otomatik olarak üretilir.
-6.  **Otomatik Stok Kodu (SKU) Üretimi:**
-    *   Manuel stok kodu girme zorunluluğu kaldırılmıştır. Kayıt esnasında sunucu otomatik olarak benzersiz `YS-XXXXXXXX` formatında kodlar üretir.
-7.  **El Yapımı (Handmade) Seçim Kutusu:**
-    *   Ürün eklerken Marka alanının yanındaki "El Yapımı" kutucuğu işaretlendiğinde marka ismi otomatik olarak "El Yapımı" olarak kilitlenir.
-8.  **Çoklu Görsel Yükleme:**
-    *   Ürün ekleme pencerelerinde doğrudan sürükle-bırak veya dosya seçimi ile çoklu görsel yükleme ve yükleme öncesi anlık önizleme grid yapısı.
-9.  **Gelişmiş Bilgi Al Panelleri:**
-    *   Yönetici ve Satıcı panellerinde ürün ekleme sayfalarının işleyişi hakkında kullanıcıya kılavuzluk eden interaktif rehber panelleri.
+### Backend
+*   **Language & Framework:** Python 3.12, FastAPI
+*   **Database & ORM:** SQLAlchemy 2.x, SQLite (managed via Alembic Migrations)
+*   **Authentication:** JWT (JSON Web Tokens) for secure session management
+*   **Image Storage:** Cloudinary integration for media assets
 
+### Frontend
+*   **Framework & Language:** React 19, TypeScript
+*   **Build Tool:** Vite
+*   **Styling:** Tailwind CSS (featuring a modern Glassmorphism navbar, smooth transitions, and micro-animations)
 
 ---
 
-## 📸 Ekran Görüntüleri (Screenshots)
+## 💡 Key Features & Functions
 
-Aşağıda YAPSAT platformunun öne çıkan sayfalarına ait ekran görüntüleri yer almaktadır:
+1.  **Advanced & Mobile-Responsive Navbar:**
+    *   Responsive hamburger navigation menu for mobile devices.
+    *   Elegant initials-based avatar indicator for authenticated users.
+    *   Dynamic links pointing to Admin and Vendor dashboards based on user roles.
+2.  **Auto Admin Promotion:**
+    *   Upon application startup, the user with the email address `arda.demirtas2002@gmail.com` is automatically promoted to the highest privilege level "ADMIN".
+3.  **Smart Category Startup Seeding:**
+    *   If no categories exist in the database, the server automatically seeds 10 popular default categories (Electronics, Home & Living, Clothing & Accessories, Cosmetics, Sports & Outdoor, Mother & Baby, Books & Hobbies, Supermarket & Food, Automotive, Pet Shop) on startup.
+4.  **Interactive Product Image Carousel:**
+    *   Product detail pages include left/right navigation arrow overlays, progress indicator dots, and a synchronized thumbnail previews grid.
+5.  **Automated SEO Optimization:**
+    *   When a product is created or updated, `seo_title` (`[Product Name] - [Category] | YAPSAT`) and `seo_description` (first 150 characters of description) are automatically generated on the backend.
+6.  **Automatic SKU (Stock Keeping Unit) Generation:**
+    *   Manual SKU inputs are removed from creation forms. The server automatically assigns a unique stock code formatted as `YS-[8-DIGIT RANDOM ALPHANUMERIC SUFFIX]` (e.g., `YS-8B7D2W3Q`).
+7.  **Handmade Brand Toggle Checkbox:**
+    *   Checking the "Handmade" box next to the Brand input automatically auto-populates and locks the Brand field value to "El Yapımı" to prevent typos.
+8.  **Multi-Image Uploads:**
+    *   Creation modals support batch file selection, drag-and-drop actions, and immediate thumbnail previews grid before submission.
+9.  **Advanced Help Guidelines Drawer:**
+    *   Admin and Vendor dashboards include an interactive guidelines drawer providing helpful operational instructions.
 
-### 🔑 Üyelik Süreçleri
-| Üye Kayıt Sayfası | Üye Giriş Sayfası |
+---
+
+## 📸 Screenshots
+
+Below are screenshots showing YAPSAT's page layouts and user flows:
+
+### 🔑 Authentication Flows
+| Register Page | Login Page |
 |:---:|:---:|
-| ![Kayıt Ol](photos/signup.png) | ![Giriş Yap](photos/login.png) |
+| ![Register](photos/signup.png) | ![Login](photos/login.png) |
 
-### 🛍️ Alışveriş ve Sepet Süreçleri
-| Ürün İnceleme & Detay (İnteraktif Carousel) | Alışveriş Sepeti |
+### 🛍️ Shopping & Cart Flows
+| Product Detail (Interactive Carousel) | Shopping Cart |
 |:---:|:---:|
-| ![Ürün İnceleme](photos/urun_incele.png) | ![Sepet](photos/sepet.png) |
+| ![Product Detail](photos/urun_incele.png) | ![Cart](photos/sepet.png) |
 
-### 💼 Yönetim ve Satıcı Dashboards
-| Yönetici Ürün Yönetim Paneli | Satıcı & Mağaza Paneli |
+### 💼 Admin & Vendor Dashboards
+| Admin Product Management Panel | Vendor & Store Dashboard |
 |:---:|:---:|
-| ![Yönetici Paneli](photos/adminpanel.png) | ![Satıcı Paneli](photos/dash.png) |
+| ![Admin Panel](photos/adminpanel.png) | ![Vendor Panel](photos/dash.png) |
 
 ---
 
-## 🛠️ Kurulum ve Çalıştırma
+## 🛠️ Installation & Running
 
-### Gereksinimler
+### Prerequisites
 *   Node.js (v18+)
 *   Python (v3.12+)
 
-### 1. Backend Kurulumu
+### 1. Backend Installation
 ```bash
 cd backend
-# Sanal ortam oluşturun ve aktif edin
+# Create and activate a virtual environment
 python -m venv .venv
 .venv\Scripts\activate
 
-# Bağımlılıkları yükleyin
+# Install dependencies
 pip install -r requirements.txt
 
-# Veri tabanı şemasını güncelleyin
+# Run database migrations
 alembic upgrade head
 
-# Sunucuyu başlatın
+# Start development server
 python -m uvicorn app.main:app --reload --port 8000
 ```
 
-### 2. Frontend Kurulumu
+### 2. Frontend Installation
 ```bash
 cd frontend
-# Bağımlılıkları yükleyin
+# Install dependencies
 npm install
 
-# Geliştirme sunucusunu çalıştırın
+# Start React dev server
 npm run dev
 ```
 
 ---
 
-## 📐 Mimari Tasarım (Backend Layers)
+## 📐 Architecture (Backend Layers)
 
-Proje, katmanlı mimari (Layered Architecture) prensiplerine göre yapılandırılmıştır:
+The project is structured according to Layered Architecture principles:
 ```
 API (Routes) ➔ Service (Business Logic) ➔ Repository (DB Queries) ➔ Database (Models)
 ```
-*   **API Katmanı:** Sadece gelen istekleri doğrular ve yanıt modellerini döner. İş mantığı barındırmaz.
-*   **Service Katmanı:** İş kurallarını (validasyonlar, stok kontrolleri, kupon doğrulama) yönetir.
-*   **Repository Katmanı:** Veri tabanı okuma/yazma işlemlerini soyutlar.
+*   **API Layer:** Validates incoming requests and returns consistent response payloads. Contains no business logic.
+*   **Service Layer:** Implements business rules (validations, stock reservations, coupon checks).
+*   **Repository Layer:** Abstract database read/write queries.
